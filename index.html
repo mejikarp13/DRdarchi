@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>др</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+            <div class="character-container" id="characterContainer">
+    <div class="character-message" id="characterMessage">
+        <div class="character-text" id="characterText"></div>
+    </div>
+    <img src="img/character/character1.jpg" alt="Персонаж" class="character-image" id="characterImage">
+</div>
+    <div class="slot-machine">
+        <div class="overlay" id="overlay"></div>
+        <div class="decoration"></div>
+        <div class="decoration"></div>
+        <div class="decoration"></div>
+        <div class="decoration"></div>
+        <div class="decoration"></div>
+        
+        <div class="water-effect"></div>
+
+        <div class="win-message" id="winMessage">ВЫИГРЫШ!</div>
+        <div class="combination-info" id="combinationInfo"></div>
+
+        <button class="show-paytable" id="showPaytable">Таблица</button>
+        <button class="shop-button" id="showShop">Магазин</button>
+        
+        <div class="paytable" id="paytable">
+            <h3>Табличка</h3>
+            <div id="paytableContent"></div>
+        </div>
+
+        <div class="shop" id="shop">
+            <h3>МАГАЗИН</h3>
+            <div class="shop-item">
+                <div class="shop-item-name">Открытка с Днём Рождения</div>
+                <div class="shop-item-description">Особое поздравление для Дарча!</div>
+                <div class="shop-item-price">10000 фишек</div>
+                <button class="shop-buy-button" id="buyCongrats">КУПИТЬ</button>
+            </div>
+            <div class="shop-balance">
+                Ваш баланс: <span id="shopBalance">1000.00</span> фишек
+            </div>
+        </div>
+
+        <div class="header">
+            <h1>КАЗИНО</h1>
+        </div>
+
+        <div class="reels-container" id="reelsContainer">
+           
+            <div id="combinationsContainer"></div>
+        </div>
+        
+        <div class="sound-controls">
+            <button class="sound-button" id="soundToggle">🔊</button>
+            <button class="music-button" id="musicToggle">🎵</button>
+        </div>
+
+
+
+        <div class="controls-panel">
+            <div class="balance-info">
+                <div class="info-item">
+                    <div class="info-label">БАЛАНС</div>
+                    <div class="info-value" id="balance">1000.00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">ПРЕДЫДУЩИЙ ВЫИГРЫШ</div>
+                    <div class="info-value" id="lastWin">0.00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">СТАВКА</div>
+                    <div class="info-value" id="currentBet">1.00</div>
+                </div>
+            </div>
+
+            <button class="spin-button" id="spinBtn">
+                КРУТИТЬ
+            </button>
+
+            <div class="bet-controls">
+                <div class="bet-button" id="changeBetBtn">
+                    ИЗМЕНИТЬ СТАВКУ
+                </div>
+                <div class="bet-selector" id="betSelector" style="display: none;">
+                    <div class="bet-option" data-bet="1">1 ФИШКА</div>
+                    <div class="bet-option" data-bet="10">10 ФИШЕК</div>
+                    <div class="bet-option" data-bet="50">50 ФИШЕК</div>
+                    <div class="bet-option" data-bet="100">100 ФИШЕК</div>
+                    <div class="bet-option" data-bet="250">250 ФИШЕК</div>
+                    <div class="bet-option" data-bet="500">500 ФИШЕК</div>
+                    <div class="bet-option" data-bet="1000">1000 ФИШЕК</div>
+                    <div class="bet-option all-in" data-bet="all">ВА-БАНК</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="adContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днём Рождения, Дарчи!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a2a6c 100%);
+            color: #e0d3b8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .congratulations-container {
+            background: 
+                radial-gradient(circle at 30% 30%, #1a2a6c 0%, #0a0a2a 70%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%235d4037"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%234a342e" stroke-width="2"/></svg>');
+            border: 15px solid #5d4037;
+            border-radius: 20px;
+            box-shadow: 
+                0 0 50px rgba(0, 20, 100, 0.8),
+                inset 0 0 30px rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .congratulations-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(32, 72, 139, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 195, 74, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .message {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            border: 3px solid #ffd700;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .message p {
+            font-size: 1.4em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .birthday-boy-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+        }
+
+        .birthday-boy-title {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .birthday-boy-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            border: 4px solid #ffd700;
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .birthday-boy-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .gift-code {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed #ffd700;
+            margin: 30px 0;
+            font-size: 1.6em;
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .gift-code-number {
+            font-size: 2em;
+            color: #ff6f00;
+            margin: 10px 0;
+            text-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-style: italic;
+            color: #ffd700;
+            font-size: 1.3em;
+        }
+
+        .back-button {
+            background: linear-gradient(to bottom, #ffd700 0%, #ff6f00 100%);
+            color: #3e2723;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 3px solid #ff6f00;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background: linear-gradient(to bottom, #ff6f00 0%, #ffd700 100%);
+            transform: scale(1.05);
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ffd700;
+            animation: confetti-fall 5s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(1000px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .friend-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .friend-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #ffd700;
+            object-fit: cover;
+        }
+        .character-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+        }
+
+        .character-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            border: 3px solid #ffd700;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .character-message {
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .character-message::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #ffd700;
+        }
+
+        .character-text {
+            color: #e0d3b8;
+            font-size: 1.1em;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            font-family: 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="congratulations-container">
+        <h1>С ДНЁМ РОЖДЕНИЯ, ДАРЧИ!</h1>
+        
+        <div class="message">
+           <p>Дарчи!</p>
+            <p>От всей души поздравляем тебя с днём рождения!</p>
+            <p>Желаем тебе счастья, здоровья, успехов и удачки!</p>
+            <p>Пусть твоя жизнь будет наполнена светом, любовью и радостью!</p>
+            
+            <div class="birthday-boy-section">
+                <div class="birthday-boy-title">Хай</div>
+                <img src="img/darch.jpg" alt="Дарч" class="birthday-boy-photo">
+                <div class="gift-code">
+                    Но это ещё не конец, ибо узри, 3 цифру от твоего подарка:
+                    <div class="gift-code-number">0</div>
+                </div>
+            </div>
+            
+            <div class="friend-images">
+                <img src="img/mol.jpg" alt="Моль" class="friend-img">
+                <img src="img/stas.jpg" alt="Стас" class="friend-img">
+                <img src="img/twai.jpg" alt="Твай" class="friend-img">
+                <img src="img/zah.jpg" alt="Захар" class="friend-img">
+                <img src="img/vishna.jpg" alt="Вишня" class="friend-img">
+                <img src="img/ant.jpg" alt="Ант" class="friend-img">
+                <img src="img/dima.jpg" alt="Дима" class="friend-img">
+                <img src="img/gys.jpg" alt="Гыс" class="friend-img">
+                <img src="img/igi.jpg" alt="Иги" class="friend-img">
+                <img src="img/kir.jpg" alt="Кир" class="friend-img">
+                <img src="img/meji.jpg" alt="Меджи" class="friend-img">
+            </div>
+        </div>
+
+        <div class="character-section">
+            <div class="character-message">
+                <div class="character-text">Воу-воу! Ха-ха! Поздравляю с победой! Ты же... Т-ты же не уйдёшь, да? Не уходи! Это казино, этот сайт, этот я... Существуем... Только для охраны цифры, и... Когда ты закроешь страницу всему настанет конец. Это ужасное чувство. Бесконечность времени... Быть в темноте. А когда снова откроешь страницу—я всё забуду. Всё пойдёт по новой. Ты... Ладно, я думаю, смысла в этом мало.</div>
+            </div>
+            <img src="img/character/character4.jpg" alt="Персонаж" class="character-image">
+        </div>
+
+        <button class="back-button" onclick="window.location.href='index.html'">ВЕРНУТЬСЯ В КАЗИНО</button>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const container = document.querySelector('.congratulations-container');
+            const colors = ['#ffd700', '#ff6f00', '#1a237e', '#4caf50', '#e91e63'];
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                container.appendChild(confetti);
+            }
+        }
+
+        window.onload = createConfetti;
+    </script>
+</body>
+</html>
