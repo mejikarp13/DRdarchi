@@ -164,7 +164,8 @@ adConfig: {
     images: [
         'img/ads/ad1.jpg',
         'img/ads/ad2.jpg',
-        'img/ads/ad3.jpg'
+        'img/ads/ad3.jpg',
+        'img/ads/ad4.jpg'
     ],
    
     showChance: 0.8,
