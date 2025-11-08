@@ -24,7 +24,7 @@ const config = {
         'friend3': 'img/twai.jpg',
         'friend4': 'img/zah.jpg',
         'friend5': 'img/vishna.jpg',
-        'birthday_boy': 'img/darch.jpg',
+        'birthday_boy': 'img/darch.png',
         'ant': 'img/ant.jpg',
         'dima': 'img/dima.jpg',
         'gys': 'img/gys.jpg',
