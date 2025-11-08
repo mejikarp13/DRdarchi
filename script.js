@@ -19,18 +19,18 @@ const config = {
     ],
    
     imagePaths: {
-        'friend1': 'img/mol.jpg',
-        'friend2': 'img/stas.jpg',
-        'friend3': 'img/twai.jpg',
-        'friend4': 'img/zah.jpg',
-        'friend5': 'img/vishna.jpg',
+        'friend1': 'img/mol.png',
+        'friend2': 'img/stas.png',
+        'friend3': 'img/twai.png',
+        'friend4': 'img/zah.png',
+        'friend5': 'img/vishna.png',
         'birthday_boy': 'img/darch.png',
-        'ant': 'img/ant.jpg',
-        'dima': 'img/dima.jpg',
-        'gys': 'img/gys.jpg',
-        'igi': 'img/igi.jpg',
-        'kir': 'img/kir.jpg',
-        'meji': 'img/meji.jpg'
+        'ant': 'img/ant.png',
+        'dima': 'img/dima.png',
+        'gys': 'img/gys.png',
+        'igi': 'img/igi.png',
+        'kir': 'img/kir.png',
+        'meji': 'img/meji.png'
     },
 
     friendNames: {
