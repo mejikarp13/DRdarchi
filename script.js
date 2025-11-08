@@ -244,7 +244,7 @@ function showCharacterMessage(type) {
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     characterText.textContent = randomMessage;
-    characterImage.src = `img/character/${randomImage}`;
+    characterImage.src = `img/${randomImage}`;
 
     characterContainer.style.display = 'flex';
     characterMessage.style.display = 'block';
