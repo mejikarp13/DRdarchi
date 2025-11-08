@@ -142,11 +142,11 @@ const config = {
     
   
     characterImages: {
-        start: ['character1.jpg'],
-        win: ['character2.jpg', 'character6.jpg'], 
-        lose: ['character1.jpg', 'character3.jpg'], 
-        purchase: ['character4.jpg'],
-        afterPurchase: ['character5.jpg']
+        start: ['character1.png'],
+        win: ['character2.png', 'character6.png'], 
+        lose: ['character1.png', 'character3.png'], 
+        purchase: ['character4.png'],
+        afterPurchase: ['character5.png']
     },
     
 
