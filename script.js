@@ -151,11 +151,11 @@ const config = {
     
 
     messageDurations: {
-        start: 7000,
-        win: 8000, 
-        lose: 6000,
-        purchase: 10000,
-        afterPurchase: 6000
+        start: 70000,
+        win: 80000, 
+        lose: 60000,
+        purchase: 100000,
+        afterPurchase: 60000
     },
 
    
